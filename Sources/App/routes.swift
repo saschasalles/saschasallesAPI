@@ -10,5 +10,23 @@ func routes(_ app: Application) throws {
         return "Hello, world!"
     }
 
-    try app.register(collection: TodoController())
+  let categoryController = CategoryController()
+  try app.register(collection: categoryController)
+  
+  let articleController = ArticleController()
+  try app.register(collection: articleController)
+
+  let skillController = SkillController()
+  try app.register(collection: skillController)
+
+  let certificateController = CertificateController()
+  try app.register(collection: certificateController)
+
+  let experienceController = ExperienceController()
+  try app.register(collection: experienceController)
+
+  let projectController = ProjectController()
+  try app.register(collection: projectController)
+
+
 }
